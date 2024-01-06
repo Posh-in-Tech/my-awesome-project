@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>iGugu Beauty Salon</title>
+    <style>
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        border: 5px solid rgba(223, 159, 247, 0.8);
+        line-height: 1.5;
+      }
+      h2 {
+        font-weight: 300;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      img {
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      .footer {
+        opacity: 0.7;
+        text-align: center;
+      }
+      body {
+        background: linear-gradient(
+          106.5deg,
+          rgba(255, 215, 185, 0.91) 23%,
+          rgba(223, 159, 247, 0.8) 93%
+        );
+      }
+      a {
+        text-decoration: none;
+        color: deeppink;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      button {
+        background-color: lightpink;
+        font-size: 18px;
+        padding: 16px 24px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        transition: all 200ms ease;
+      }
+      button:hover {
+        background-color: black;
+        color: deeppink;
+        border: 1px solid deeppink;
+      }
+      .platform {
+        color: purple;
+      }
+      .contact {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>iGugu Beauty Salon</h1>
+      ;
+      <h2>WHERE QUALITY, ELEGANCE AND BEAUTY COME TO MEET</h2>
+      ;
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/108/425/original/117293183_657504638197257_5857708355073214120_n.jpg?1703667798"
+      />;
+      <p>
+        Are you looking for a beauty therapist who will take you from basic to
+        bombshell, stale to stunning? Well your search has come to end . iGugu
+        Beauty Salon offers you the best quality services with convenience and
+        elegance at heart. With over 3000 hours of experience, you are most
+        definitely in the best hands possible. We can't wait for your visit!
+        <br />
+        <a
+          href="https://www.facebook.com/iGuguBeautySalon/photos"
+          target="_blank"
+        >
+          <em> SEE OUR WORK </em>
+        </a>
+      </p>
+      <button class="bookButton">Book Now</button>
+      <br />
+      <div class="platform">
+        Contact☎:<span class="contact"> 0787425201</span>
+      </div>
+      <hr />
+      <p class="footer">Coded by Portia Shezi</p>
+      <script>
+        function bookNow() {
+          let name = prompt("What is your name?");
+          let surname = prompt("What is your surname?");
+          let email = prompt("What is your email?");
+          let day = prompt(
+            "Which day would you prefer for your visit?"
+          ).toLowerCase();
+          if (day === "sunday") {
+            while (day === "sunday") {
+              alert(
+                "Unfortunately" +
+                  " " +
+                  name +
+                  " " +
+                  "we are not open on this day"
+              );
+              day = prompt("Please choose another day for your visit");
+            }
+            alert(
+              "Thank you" +
+                " " +
+                name +
+                "" +
+                ",we'll be in touch to confirm your booking"
+            );
+          } else {
+            alert(
+              "Thank you" +
+                " " +
+                name +
+                ", we'll be in touch to confirm your booking"
+            );
+          }
+        }
+        let bookButton = document.querySelector("button");
+        bookButton.addEventListener("click", bookNow);
+      </script>
+    </div>
+  </body>
+</html>
